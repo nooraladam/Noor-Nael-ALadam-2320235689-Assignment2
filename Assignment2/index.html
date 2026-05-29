@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">New User Registration Form</h2>
+
+    <form action="/submit-registration" method="POST" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Basic Account Info</legend>
+
+            <div>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required minlength="3" maxlength="20"
+                    placeholder="Enter username (3-20 characters)">
+            </div>
+
+            <div>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required placeholder="example@domain.com">
+            </div>
+
+            <div>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required minlength="8"
+                    placeholder="At least 8 characters">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required min="1950-01-01" max="2026-12-31">
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <div>
+                <label for="country">Country of Residence:</label><br>
+                <select id="country" name="country" required>
+                    <option value="">-- Select Country --</option>
+                    <option value="PS">Palestine</option>
+                    <option value="JO">Jordan</option>
+                    <option value="EG">Egypt</option>
+                    <option value="SA">Saudi Arabia</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="profile-pic">Profile Picture:</label><br>
+                <input type="file" id="profile-pic" name="profile_pic" accept="image/png, image/jpeg">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Info & Interests</legend>
+
+            <div>
+                <label for="experience">Web Experience Level (0-10):</label><br>
+                <input type="range" id="experience" name="experience" min="0" max="10" value="5" step="1">
+            </div>
+
+            <div>
+                <label>Technical Interests:</label>
+                <input type="checkbox" id="html" name="interests" value="html">
+                <label for="html">HTML / CSS</label>
+
+                <input type="checkbox" id="js" name="interests" value="js">
+                <label for="js">JavaScript</label>
+
+                <input type="checkbox" id="backend" name="interests" value="backend">
+                <label for="backend">Backend Dev</label>
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Short Bio:</label><br>
+                <textarea id="bio" name="bio" rows="4" maxlength="250"
+                    placeholder="Write a brief bio under 250 characters..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" class="inline-label">I agree to the Terms & Conditions and Privacy Policy.</label>
+            </div>
+        </fieldset>
+
+        <div class="buttons">
+            <button type="submit">Complete Registration</button>
+            <button type="reset">Clear Data</button>
+        </div>
+
+    </form>
+
+
+
+
+</body>
+
+</html>
